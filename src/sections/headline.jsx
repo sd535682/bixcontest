@@ -1,5 +1,5 @@
 import backgroundImage from "../assets/background.jpg";
-import BodyText from "../components/bodyText";
+import BodyText from "../components/bodytext";
 import Button from "../components/button";
 import Header from "../components/header";
 
