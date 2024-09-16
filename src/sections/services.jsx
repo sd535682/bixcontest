@@ -1,7 +1,7 @@
 import Header from "../components/header";
 import ServicesBox from "../components/servicesbox";
 import StaticButton from "../components/staticButton";
-import BodyText from "../components/bodyText";
+import BodyText from "../components/bodytext";
 
 export default function Services() {
   return (
