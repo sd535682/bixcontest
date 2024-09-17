@@ -1,16 +1,10 @@
-export default function Button({
-  text,
-  textColor,
-  bgColor,
-  hoverColor,
-  borderColor,
-}) {
+export default function Button({ buttonColor, buttonTextColor, buttonText }) {
   return (
-    <a
-      href="#"
-      className={`${textColor} ${bgColor} ${hoverColor} border-2 ${borderColor} px-8 py-4 w-fit rounded-full transition-all duration-500 hover:scale-105`}
+    <button
+      className="px-8 py-2 rounded-full"
+      style={{ backgroundColor: buttonColor, color: buttonTextColor }}
     >
-      {text}
-    </a>
+      {buttonText}
+    </button>
   );
 }
