@@ -26,13 +26,8 @@ html::-webkit-scrollbar {
 }
 
 /* Cursor Color */
-
 html {
-  --cursor-color: #fff;
-}
-
-html.dark-mode {
-  --cursor-color: #fff;
+  --cursor-color: #f2613f;
 }
 
 /* Text Selectable */

@@ -1,6 +1,6 @@
 export default function BoxDetails({ title, description }) {
   return (
-    <div className="flex flex-col bg-Light">
+    <div className="flex flex-col">
       <div className="flex-3">
         <img
           src="https://images.pexels.com/photos/4342352/pexels-photo-4342352.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
