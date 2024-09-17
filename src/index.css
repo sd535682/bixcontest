@@ -24,3 +24,31 @@ html::-webkit-scrollbar {
   src: url("/src/assets/fonts/Roboto.ttf") format("truetype");
   font-weight: 400;
 }
+
+/* Cursor Color */
+
+html {
+  --cursor-color: #fff;
+}
+
+html.dark-mode {
+  --cursor-color: #fff;
+}
+
+/* Text Selectable */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Excessive Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-y: scroll; /* Ensure scrollbar is always visible */
+}

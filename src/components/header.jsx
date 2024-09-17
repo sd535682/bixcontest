@@ -8,7 +8,7 @@ export default function Header({
 }) {
   return (
     <div className="relative">
-      <div className="absolute top-0 left-0 w-full h-full bg-opacity-50 backdrop-blur-md" />
+      <div className="absolute top-0 left-0 w-full h-full" />
       <div className="flex w-full flex-row justify-between items-center relative z-10 px-20 py-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -17,7 +17,7 @@ export default function LandingPage() {
       <div className="z-10">
         {/* <Header logoColor="white" buttonColor="bg-white" /> */}
         <div className="flex flex-col gap-10 h-screen text-white justify-center">
-          <h1 className="text-9xl font-bold">
+          <h1 className="text-9xl font-bold font-montserrat">
             BIXCON <span className="text-Light">AI</span>
           </h1>
           <h1 className="text-3xl font-roboto font-thin">
