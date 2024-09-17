@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, useMemo } from "react";
-import Header from "./components/Header";
+import Header from "./components/header";
 import LandingPage from "./sections/landingpage";
 import FirstPage from "./sections/firstpage";
 import SecondPage from "./sections/secondpage";
