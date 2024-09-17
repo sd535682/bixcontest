@@ -20,8 +20,10 @@ export default function LandingPage() {
           <h1 className="text-9xl font-bold">
             BIXCON <span className="text-Light">AI</span>
           </h1>
-          <h1 className="text-3xl">
-            The Future of Construction Management is Coming
+          <h1 className="text-3xl font-roboto font-thin">
+            The Future of{" "}
+            <span className="text-Light">Construction Management</span> is
+            Coming
           </h1>
         </div>
       </div>

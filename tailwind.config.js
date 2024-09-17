@@ -9,6 +9,10 @@ export default {
         Medium: "#9B3922",
         Light: "#F2613F",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],

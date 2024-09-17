@@ -11,3 +11,16 @@ html {
 html::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
 }
+
+/* Fonts */
+@font-face {
+  font-family: "Montserrat";
+  src: url("/src/assets/fonts/Montserrat.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/src/assets/fonts/Roboto.ttf") format("truetype");
+  font-weight: 400;
+}
