@@ -6,6 +6,8 @@ import FirstPage from "./sections/firstpage";
 import SecondPage from "./sections/secondpage";
 import ThirdPage from "./sections/thirdpage";
 import Cursor from "./components/customcursor";
+import FourthPage from "./sections/fourthpage";
+import NewsLetter from "./sections/newsletter";
 
 export default function App() {
   const [currentSection, setCurrentSection] = useState("landing");
@@ -14,6 +16,8 @@ export default function App() {
     first: useRef(null),
     second: useRef(null),
     third: useRef(null),
+    fourth: useRef(null),
+    fifth: useRef(null),
   };
 
   useEffect(() => {
@@ -42,11 +46,13 @@ export default function App() {
   }, []);
 
   const { logoColor, buttonColor, buttonTextColor } = useMemo(() => {
-    const isSecondSection = currentSection === "second";
+    const isSecondOrFourthSection = ["second", "fourth"].includes(
+      currentSection
+    );
     return {
-      logoColor: isSecondSection ? "black" : "white",
-      buttonColor: isSecondSection ? "white" : "black",
-      buttonTextColor: isSecondSection ? "black" : "white",
+      logoColor: isSecondOrFourthSection ? "black" : "white",
+      buttonColor: isSecondOrFourthSection ? "white" : "black",
+      buttonTextColor: isSecondOrFourthSection ? "black" : "white",
     };
   }, [currentSection]);
 
@@ -54,7 +60,7 @@ export default function App() {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="fixed top-0 left-0 right-0 z-50">
+      <div className="fixed top-0 left-0 right-0 z-50 will-change-transform">
         <Cursor />
         <Header
           logoColor={logoColor}
@@ -74,20 +80,56 @@ export default function App() {
           <Link to="third" smooth={true} duration={1000}>
             Third Page
           </Link>
+          <Link to="fourth" smooth={true} duration={1000}>
+            Fourth Page
+          </Link>
+          <Link to="fifth" smooth={true} duration={1000}>
+            NewsLetter
+          </Link>
         </Header>
       </div>
-      <main>
-        <div id="landing" ref={sectionRefs.landing}>
+      <main className="will-change-transform">
+        <div
+          id="landing"
+          ref={sectionRefs.landing}
+          className="will-change-transform"
+        >
           <LandingPage />
         </div>
-        <div id="first" ref={sectionRefs.first}>
+        <div
+          id="first"
+          ref={sectionRefs.first}
+          className="will-change-transform"
+        >
           <FirstPage />
         </div>
-        <div id="second" ref={sectionRefs.second}>
+        <div
+          id="second"
+          ref={sectionRefs.second}
+          className="will-change-transform"
+        >
           <SecondPage />
         </div>
-        <div id="third" ref={sectionRefs.third}>
+        <div
+          id="third"
+          ref={sectionRefs.third}
+          className="will-change-transform"
+        >
           <ThirdPage />
+        </div>
+        <div
+          id="fourth"
+          ref={sectionRefs.fourth}
+          className="will-change-transform"
+        >
+          <FourthPage />
+        </div>
+        <div
+          id="fifth"
+          ref={sectionRefs.fifth}
+          className="will-change-transform"
+        >
+          <NewsLetter />
         </div>
       </main>
     </div>

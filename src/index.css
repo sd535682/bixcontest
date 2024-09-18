@@ -45,5 +45,6 @@ html {
 
 body {
   scroll-behavior: smooth;
-  overflow-y: scroll; /* Ensure scrollbar is always visible */
 }
+
+/* Learn More */

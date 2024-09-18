@@ -8,6 +8,7 @@ export default {
         SemiDark: "#481E14",
         Medium: "#9B3922",
         Light: "#F2613F",
+        White: "#FFFFFF",
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
