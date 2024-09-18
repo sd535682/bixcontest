@@ -1,15 +1,52 @@
+import React, { useRef, useEffect } from "react";
+
 export default function SecondPage() {
+  const buttonRef = useRef(null);
+
+  useEffect(() => {
+    const button = buttonRef.current;
+    if (!button) return;
+
+    const handleMouseMove = (e) => {
+      const rect = button.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+
+      const moveX = e.clientX - centerX;
+      const moveY = e.clientY - centerY;
+
+      button.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    };
+
+    const handleMouseLeave = () => {
+      button.style.transform = "translate(0, 0)";
+    };
+
+    button.addEventListener("mousemove", handleMouseMove);
+    button.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      button.removeEventListener("mousemove", handleMouseMove);
+      button.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
+
   return (
     <div className="flex flex-col w-screen h-screen bg-white px-20 pt-24">
       <section className="grid grid-cols-12 gap-10 h-full text-Dark pb-5 overflow-hidden">
         {/* Learn More Button */}
         <div className="col-span-2 flex items-center">
-          <div
-            className="border-2 border-Dark rounded-full aspect-square w-full flex justify-center items-center"
+          {/* Learn More Animated Button */}
+          <a
+            href="www.bixconai.com"
+            ref={buttonRef}
+            className="border-4 border-Dark rounded-full aspect-square w-full flex justify-center items-center cursor-pointer transition-transform duration-200 ease-out"
             id="#learnmore"
           >
-            <h1 className="text-center uppercase text-xl">Learn More</h1>
-          </div>
+            <h1 className="text-center uppercase text-xl font-bold text-SemiDark">
+              Learn More
+            </h1>
+          </a>
         </div>
         {/* Image */}
         <div className="col-span-5">
