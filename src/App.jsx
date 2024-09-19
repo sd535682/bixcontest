@@ -56,7 +56,7 @@ export default function App() {
     };
   }, [currentSection]);
 
-  const buttonText = "Request a Project";
+  const buttonText = "About us";
 
   return (
     <div className="overflow-x-hidden">
